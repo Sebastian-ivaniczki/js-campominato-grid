@@ -47,7 +47,7 @@ button.addEventListener('click', function() {
     console.log(dificultLevel)
     let rows = 0;
     let colls = 0;
-    
+    //! in base alla dificolta cambio i valori delle row delle cols e decido che classe aggiunger
     if(dificultLevel === 'easy'){
         rows = 10;
         colls = 10;
