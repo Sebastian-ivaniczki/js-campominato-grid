@@ -22,12 +22,13 @@ poi coloriamo la cella d'azzurro!
 // prendo gli elementi in pagina  
 const button = document.getElementById('play');
 const grid = document.getElementById('my-container');
+const dificultLevelField = document.getElementById('difficult-level');
 
 //! creo una funzione per generare le caselle ---------------
 
 const createcell = () =>{
     const cell = document.createElement('div')
-    cell.classList.add('cell')
+    cell.classList.add('cell', cellClas)
     return cell;
 }
 //! creo una funzione per rimuovere le celle dal dom
@@ -38,16 +39,34 @@ function resetButton() {
     }
   }
 
-//creo delle costanti per il numero di celle
-const rows = 10;
-const colls = 10;
-const totalCells = rows * colls;
-// genero un avento al clik del bottone
-
 let isReset = false;
+let cellClas = ('')
 
 button.addEventListener('click', function() {
-  if (isReset) {
+    dificultLevel = dificultLevelField.value
+    console.log(dificultLevel)
+    let rows = 0;
+    let colls = 0;
+    
+    if(dificultLevel === 'easy'){
+        rows = 10;
+        colls = 10;
+        cellClas = ('easy')
+    }else if (dificultLevel === 'medium'){
+        rows = 9;
+        colls = 9;
+        cellClas = ('medium')
+    }else if(dificultLevel === 'hard'){
+        rows = 7;
+        colls = 7;
+        cellClas = ('hard')
+    }
+
+   
+    const totalCells = rows * colls;
+    // genero un avento al clik del bottone
+
+    if (isReset) {
     resetButton()
     button.innerText = 'new game'
     // Imposto isReset a false

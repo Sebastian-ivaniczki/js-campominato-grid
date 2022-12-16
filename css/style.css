@@ -34,8 +34,7 @@ section{
 
 
 .cell{
-    height: calc(100% / 10);
-    width: calc(100% / 10);
+    
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -45,4 +44,18 @@ section{
 
 .cell.cliked{
     background-color: blue;
+}
+
+.easy{
+    height: calc(100% / 10);
+    width: calc(100% / 10);
+}
+
+.medium{
+    height: calc(100% / 9);
+    width: calc(100% / 9); 
+}
+.hard{
+    height: calc(100% / 7);
+    width: calc(100% / 7); 
 }
