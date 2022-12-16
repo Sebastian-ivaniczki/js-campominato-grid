@@ -37,6 +37,7 @@ const colls = 10;
 const totalCells = rows * colls;
 // genero un avento al clik del bottone
 
+
 button.addEventListener('click' , function(){
 
     for(let i = 1; i <= totalCells; i++ ){
@@ -52,4 +53,6 @@ button.addEventListener('click' , function(){
         
        grid.appendChild(cell)
     }
+
+    this.disabled = true
 });
