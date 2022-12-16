@@ -43,9 +43,13 @@ button.addEventListener('click' , function(){
        const cell = createcell();
         cell.append(i)
 
+       
         cell.addEventListener('click' , function(){
-            cell.classList.add('cliked')
+            cell.classList.toggle('cliked')
+            // TODO add cell number in console
         });
+
+        
        grid.appendChild(cell)
     }
 });
