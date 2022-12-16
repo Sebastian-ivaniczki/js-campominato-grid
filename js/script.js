@@ -49,6 +49,7 @@ let isReset = false;
 button.addEventListener('click', function() {
   if (isReset) {
     resetButton()
+    button.innerText = 'new game'
     // Imposto isReset a false
     isReset = false;
   } else {
@@ -59,12 +60,12 @@ button.addEventListener('click', function() {
 
       cell.addEventListener('click', function() {
         cell.classList.toggle('cliked');
-        // TODO add cell number in console
+        console.log(i)
       });
 
       grid.appendChild(cell);
     }
-
+    button.innerText = 'reset'
     // Imposto isReset a true
     isReset = true;
   }
