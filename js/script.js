@@ -30,6 +30,13 @@ const createcell = () =>{
     cell.classList.add('cell')
     return cell;
 }
+//! creo una funzione per rimuovere le celle dal dom
+function resetButton() {
+     // Rimuovo tutte le celle dalla griglia
+    while (grid.firstChild) {
+      grid.removeChild(grid.firstChild);
+    }
+  }
 
 //creo delle costanti per il numero di celle
 const rows = 10;
@@ -37,22 +44,32 @@ const colls = 10;
 const totalCells = rows * colls;
 // genero un avento al clik del bottone
 
+let isReset = false;
 
-button.addEventListener('click' , function(){
+button.addEventListener('click', function() {
+  if (isReset) {
+    resetButton()
+    // Imposto isReset a false
+    isReset = false;
+  } else {
+   
+    for (let i = 1; i <= totalCells; i++) {
+      const cell = createcell();
+      cell.append(i);
 
-    for(let i = 1; i <= totalCells; i++ ){
-       const cell = createcell();
-        cell.append(i)
+      cell.addEventListener('click', function() {
+        cell.classList.toggle('cliked');
+        // TODO add cell number in console
+      });
 
-       
-        cell.addEventListener('click' , function(){
-            cell.classList.toggle('cliked')
-            // TODO add cell number in console
-        });
-
-        
-       grid.appendChild(cell)
+      grid.appendChild(cell);
     }
 
-    this.disabled = true
+    // Imposto isReset a true
+    isReset = true;
+  }
 });
+
+
+
+
