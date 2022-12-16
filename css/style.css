@@ -36,8 +36,13 @@ section{
 .cell{
     height: calc(100% / 10);
     width: calc(100% / 10);
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid #fff;
+}
+
+.cell.cliked{
+    background-color: blue;
 }

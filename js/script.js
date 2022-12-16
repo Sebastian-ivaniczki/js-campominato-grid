@@ -41,7 +41,11 @@ button.addEventListener('click' , function(){
 
     for(let i = 1; i <= totalCells; i++ ){
        const cell = createcell();
+        cell.append(i)
 
+        cell.addEventListener('click' , function(){
+            cell.classList.add('cliked')
+        });
        grid.appendChild(cell)
     }
 });
