@@ -1,0 +1,43 @@
+.navbar{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 3rem;
+    margin-left: 3rem;
+}
+
+.logo{
+    display: flex;
+}
+
+.logo h1{
+    margin-left: 1rem;
+}
+
+section{
+    background-color: #7FFFD4;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#my-container{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    border: 1px dashed rgb(0, 0, 0);
+}
+
+
+.cell{
+    height: calc(100% / 10);
+    width: calc(100% / 10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+}
