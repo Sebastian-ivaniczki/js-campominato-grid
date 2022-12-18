@@ -14,7 +14,15 @@
 .logo h1{
     margin-left: 1rem;
 }
+/* navbar righ  */
 
+#difficult-level{
+    margin-right: 0.5rem;
+    border-radius: 1rem;
+    padding-left: 10px;
+    background-color: #6C757D;
+    color: #fff;
+}
 section{
     background-color: #7FFFD4;
     height: 600px;

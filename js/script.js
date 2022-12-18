@@ -26,13 +26,13 @@ const dificultLevelField = document.getElementById('difficult-level');
 
 //! creo una funzione per generare le caselle ---------------
 
-const createcell = () =>{
+const createcell = () => {
     const cell = document.createElement('div')
     cell.classList.add('cell', cellClas)
     return cell;
 }
 //! creo una funzione per rimuovere le celle dal dom
-function resetButton() {
+const resetCells = () => {
      // Rimuovo tutte le celle dalla griglia
     while (grid.firstChild) {
       grid.removeChild(grid.firstChild);
@@ -67,7 +67,7 @@ button.addEventListener('click', function() {
     // genero un avento al clik del bottone
 
     if (isReset) {
-    resetButton()
+    resetCells()
     button.innerText = 'new game'
     // Imposto isReset a false
     isReset = false;
